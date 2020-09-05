@@ -1,0 +1,63 @@
+1. .gitignore
+
+2. npm init / yarn init
+
+3. Eslint 
+-npm install --save-dev eslint / yarn add --dev eslint
+-npx eslint --init
+
+4. Babel
+-npm install --save-dev @babel/core @babel/cli @babel/preset-env 
+-npm install core-js@3
+
+5. .babelrc
+
+6. .browserslistrc
+
+7. .eslintignore
+
+8. Webpack
+-npm install --save-dev webpack webpack-cli babel-loader
+
+9. webpack.config.js
+
+10. webpack.dev.js
+
+11. webpack.prod.js
+
+12. webpack.common.js
+
+-npm install html-webpack-plugin
+-npm install mini-css-extract-plugin css-loader
+-npm install optimize-css-assets-webpack-plugin
+-npm install terser-webpack-plugin
+-npm install webpack-merge
+
+-npm install --save-dev html-loader
+-npm install --save-dev file-loader
+-npm install --save-dev image-webpack-loader
+-npm install --save-dev webpack-dev-server
+
+13. Jest
+-npm install --save-dev jest babel-jest @babel/core @babel/cli @babel/preset-env 
+-npm install core-js@3
+
+14. eslintrc.json:
+"env": {
+...
+        "jest": true
+    }
+"rules": {
+        "import/extensions":["error","ignorePackages"]
+    }
+
+15. package.json: 
+"scripts": {
+    "start": "webpack-dev-server --config webpack.dev.js",
+    "start:dev": "webpack-dev-server",
+    "build": "webpack --config webpack.prod.js",
+    "lint": "eslint .",
+    "test": "jest test-scripts test --passWithNoTests"
+  }
+
+16. appveyor.yml
